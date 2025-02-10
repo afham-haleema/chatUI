@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik',serif;
+}
+body{
+    display: flex;
+    align-items: center;
+}
+.curve{
+    width: 25vw;
+    height: 85vh;
+    background: linear-gradient(135deg,hsl(276, 100%, 81%),hsl(276, 55%, 52%));
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius:40% ;
+    border-bottom-right-radius:50% ;
+    position: relative;
+    z-index: 1;
+}
+.curve-grey{
+    width: 25vw;
+    height: 85vh;
+    background-color: rgb(244, 240, 240);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius:50% ;
+    border-top-right-radius:40% ;
+    position: relative;
+    z-index: 1;
+    transform: translate(100%,15%);
+}
+.phone{
+    border: 15px solid white;
+    background-color: hsl(270, 20%, 96%);
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 16vw;
+    position: absolute;
+    z-index: 10;
+    top: 160px;
+    left: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.design{
+    width: 400px;
+    transform: translateX(100%);
+    z-index: 1000;
+}
+.design p{
+    font-size: 20px;
+    color:  hsl(270, 7%, 64%);
+}
+.white{
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+    height: 15px;
+    background-color: white;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-left: 60px;
+}
+.statusbar{
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background:linear-gradient(135deg,hsl(276, 100%, 81%),hsl(276, 55%, 52%));
+    width:14vw;
+    height: 8vh;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 10px;
+}
+.statusbar img{
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.text-received{
+    margin: 5px 15px;
+    color: hsl(276, 55%, 52%);
+    background-color: rgb(226, 223, 223);
+    font-size: 9px;
+    width: 60%;
+    padding: auto;
+    display: inline-block;
+    word-wrap: break-word;
+    border-radius: 15px;
+    padding: 5px;
+    border-bottom-left-radius: 0;
+}
+.pic-sent{
+    display: flex;
+    gap: 5px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.pic-sent img{
+    border-radius: 15px;
+}
+.text-sent{
+    margin-left: 75px;
+    color: hsl(276, 55%, 52%);
+    background-color: rgb(226, 223, 223);
+    width: 60%;
+    font-size: 9px;
+    display: inline-block;
+    word-wrap: break-word;
+    padding: 5px;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:linear-gradient(135deg,hsl(276, 100%, 81%),hsl(276, 55%, 52%)) ;
+    border: 2px solid white;
+}
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px 15px;
+    color: white;
+    background:linear-gradient(135deg,hsl(276, 100%, 81%),hsl(276, 55%, 52%));
+    width: 70%;
+    height: 20%;
+    font-size: 8px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+}
+.chat{
+    position: fixed;
+    bottom: 5px;
+    width:13.5vw;
+    height: 14%;
+    background-color: rgb(255, 252, 252);
+    margin: 5px 5px;
+    border-radius: 20px;
+    position: relative;
+    color: hsl(206, 6%, 79%);
+}
+input{
+    border: none;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 15;
+}
+input:focus{
+    outline: none;
+}
+
+.send{
+    margin-left: 170px;
+    position: absolute;
+    top: 3px;
+    z-index: 100;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(271, 36%, 24%);
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    /* Center everything */
+    body {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+        overflow: scroll;
+    }
+
+    /* Curve positioned to the leftmost end */
+    .curve {
+        width: 50%;
+        height: 40vh;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    /* Hide grey curve on mobile */
+    .curve-grey {
+        display: none;
+    }
+
+    /* Ensure phone is above the curve */
+    .phone {
+        width: 60vw; /* Increase width for mobile */
+        height: 65vh;
+        position: relative;
+        z-index: 10; /* Higher z-index so it's above the curve */
+        left: auto;
+        border-width: 10px;
+    }
+
+    .statusbar{
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        background:linear-gradient(135deg,hsl(276, 100%, 81%),hsl(276, 55%, 52%));
+        width:55vw;
+        height: 10%;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        font-size: 10px;
+    }
+
+    .chat{
+        position: fixed;
+        bottom: 5px;
+        width:53vw;
+        height: 8%;
+        background-color: rgb(255, 252, 252);
+        margin: 5px 5px;
+        border-radius: 20px;
+        position: relative;
+        color: hsl(206, 6%, 79%);
+    }
+
+    /* Adjust design section below phone */
+    .design {
+        width: 90%;
+        text-align: center;
+        margin-top: 200px; /* Move below phone */
+        transform: translateX(0);
+    }
+
+    .design h1 {
+        font-size: 30px;
+    }
+
+    .design p {
+        font-size: 24px;
+    }
+}
