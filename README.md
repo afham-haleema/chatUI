@@ -31,8 +31,6 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL:
-=======
 - Live Site URL: https://github.com/afham-haleema/chatUI
 
 
