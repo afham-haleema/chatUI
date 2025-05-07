@@ -31,11 +31,10 @@ Users should be able to:
 
 ### Links
 
-<<<<<<< HEAD
 - Live Site URL:
 =======
 - Live Site URL: https://github.com/afham-haleema/chatUI
->>>>>>> 7457b155cb5882eadd1cfccd12208cfd78166764
+
 
 ## My process
 
